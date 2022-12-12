@@ -8,6 +8,25 @@ class Product
     protected $details;
     protected $category;
 
+    public function __construct(String $product_type, String $name, Float $price, String $details, String $category)
+    {
+        $this->product_type = $product_type;
+        $this->name = $name;
+        $this->price = $price;
+        $this->details = $details;
+        $this->category = $category;
+
+        if ($product_type !== 'food' && $product_type !== 'bed' && $product_type !== 'toy') {
+            echo 'Error! Product type must be "food", "bed" or "toy"';
+            die;
+        }
+
+        if ($category !== 'dog' && $category !== 'cat') {
+            echo 'Error! Category must be "cat" or "dog"';
+            die;
+        }
+    }
+
     public function get_product_type()
     {
         return $this->product_type;
