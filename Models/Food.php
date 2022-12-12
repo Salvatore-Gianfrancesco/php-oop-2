@@ -8,8 +8,9 @@ class Food extends Product
     protected $flavor;
     protected $caloric_content;
 
-    public function __construct(String $name, Float $price, String $details, String $category, String $size, String $flavor, String $caloric_content)
+    public function __construct(String $product_type, String $name, Float $price, String $details, String $category, String $size, String $flavor, String $caloric_content)
     {
+        parent::set_product_type($product_type);
         parent::set_name($name);
         parent::set_price($price);
         parent::set_details($details);
@@ -17,6 +18,11 @@ class Food extends Product
         $this->size = $size;
         $this->flavor = $flavor;
         $this->caloric_content = $caloric_content;
+
+        if ($product_type !== 'food' && $product_type !== 'bed' && $product_type !== 'toy') {
+            echo 'Error! Product type must be "food", "bed" or "toy"';
+            die;
+        }
 
         if ($category !== 'dog' && $category !== 'cat') {
             echo 'Error! Category must be "cat" or "dog"';

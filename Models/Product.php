@@ -2,10 +2,21 @@
 
 class Product
 {
+    protected $product_type;
     protected $name;
     protected $price;
     protected $details;
     protected $category;
+
+    public function get_product_type()
+    {
+        return $this->product_type;
+    }
+
+    public function set_product_type($product_type)
+    {
+        $this->product_type = $product_type;
+    }
 
     public function get_name()
     {
