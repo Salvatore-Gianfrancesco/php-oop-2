@@ -66,7 +66,7 @@ $database = [
         'Colorful feathers, string, and crinkle material, with a sprinkle of catnip make this cat teaser wand toy a playtime go-to.',
         'cat',
         'Polyester',
-        'blue'
+        'Blue'
     ),
 
     new Toy(
@@ -76,7 +76,7 @@ $database = [
         'From Frisco by Chewy. These colorful plush mice feature soft textures, string tails and a Canadian catnip infusion sewn inside.',
         'cat',
         'Polyester, Synthetic Fabric',
-        'red'
+        'Red'
     ),
 
     new Toy(
@@ -86,7 +86,7 @@ $database = [
         'High bouncing balls that can be used in the water for a splashing good time.',
         'dog',
         'Rubber',
-        'orange'
+        'Orange'
     ),
 
     new Bed(
