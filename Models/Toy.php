@@ -20,13 +20,11 @@ class Toy extends Product
         $this->color = $color;
 
         if ($product_type !== 'food' && $product_type !== 'bed' && $product_type !== 'toy') {
-            echo 'Error! Product type must be "food", "bed" or "toy"';
-            die;
+            throw new Exception('Error! Product type must be "food", "bed" or "toy"');
         }
 
         if ($category !== 'dog' && $category !== 'cat') {
-            echo 'Error! Category must be "cat" or "dog"';
-            die;
+            throw new Exception('Error! Category must be "cat" or "dog"');
         }
     }
 }
